@@ -8,6 +8,19 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FPViewController : UIViewController
+@interface FPViewController : UIViewController {
+    IBOutletCollection(UIView) NSArray* panels;
+    IBOutlet UIView *baseView;
+    IBOutlet UILabel *scoreLabel;
+    IBOutlet UILabel *gameoverLabel;
+    IBOutlet UIButton *retryButton;
+    
+    float startX, startY;
+    float endX, endY;
+    int startTag;
+    int score;
+}
+
+- (IBAction)tappedRetryButton;
 
 @end
