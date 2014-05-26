@@ -26,6 +26,8 @@
     endY = 0;
     startTag = 0;
     score = 0;
+    length = 4;
+    totalPanel = (int)[panels count];
     
     retryButton.hidden = YES;
     gameoverLabel.hidden = YES;
@@ -82,7 +84,7 @@
     
     UITouch *touch = [touches anyObject];
     
-    if (1 <= (int)touch.view.tag && (int)touch.view.tag <= 16) {
+    if (1 <= (int)touch.view.tag && (int)touch.view.tag <= totalPanel) {
         startTag = (int)touch.view.tag;
         CGPoint location = [touch locationInView:baseView];
         startX = location.x;
@@ -93,7 +95,7 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
 
-    if (1 <= startTag && startTag <= 16) {
+    if (1 <= startTag && startTag <= totalPanel) {
         UITouch *touch = [touches anyObject];
         CGPoint location = [touch locationInView:baseView];
         endX = location.x;
@@ -102,7 +104,7 @@
         if (fabsf(endX - startX) > (fabsf(endY - startY))) {
             if ((endX - startX) > 0) {
                 // 右フリック
-                if(startTag % 4 != 0) {
+                if(startTag % length != 0) {
                     UIView* view1 = [baseView viewWithTag:(startTag + 1)];
                     CGPoint point1 = view1.center;
                     UIView* view2 = [baseView viewWithTag:startTag];
@@ -126,7 +128,7 @@
                 }
             } else {
                 // 左フリック
-                if(startTag % 4 != 1) {
+                if(startTag % length != 1) {
                     UIView* view1 = [baseView viewWithTag:(startTag - 1)];
                     CGPoint point1 = view1.center;
                     UIView* view2 = [baseView viewWithTag:startTag];
@@ -154,8 +156,8 @@
         } else {
             if ((startY - endY) > 0) {
                 // 上フリック
-                if(startTag > 4) {
-                    UIView* view1 = [baseView viewWithTag:(startTag - 4)];
+                if(startTag > length) {
+                    UIView* view1 = [baseView viewWithTag:(startTag - length)];
                     CGPoint point1 = view1.center;
                     UIView* view2 = [baseView viewWithTag:startTag];
                     CGPoint point2 = view2.center;
@@ -168,8 +170,8 @@
                             
                         }completion:^(BOOL finished){
                             scoreLabel.text = [NSString stringWithFormat:@"%d", score];
-                            view2.tag -= 4;
-                            view1.tag += 4;
+                            view2.tag -= length;
+                            view1.tag += length;
                             view1.center = point2;
                             [self changeColor:view1];
                         }];
@@ -178,8 +180,8 @@
                 }
             } else {
                 // 下フリック
-                if(startTag < 13) {
-                    UIView* view1 = [baseView viewWithTag:(startTag + 4)];
+                if(startTag <= totalPanel - length) {
+                    UIView* view1 = [baseView viewWithTag:(startTag + length)];
                     CGPoint point1 = view1.center;
                     UIView* view2 = [baseView viewWithTag:startTag];
                     CGPoint point2 = view2.center;
@@ -193,8 +195,8 @@
                             
                         }completion:^(BOOL finished){
                             scoreLabel.text = [NSString stringWithFormat:@"%d", score];
-                            view2.tag += 4;
-                            view1.tag -= 4;
+                            view2.tag += length;
+                            view1.tag -= length;
                             view1.center = point2;
                             [self changeColor:view1];
                         }];
@@ -212,66 +214,66 @@
 - (void)checkGameOver {
     
     for (UIView* panel in panels) {
-        if (panel.tag < 5) {
-            if (panel.tag % 4 == 1) {
+        if (panel.tag <= length) {
+            if (panel.tag % length == 1) {
                 UIView* view1 = [baseView viewWithTag:(panel.tag + 1)];
-                UIView* view2 = [baseView viewWithTag:(panel.tag + 4)];
+                UIView* view2 = [baseView viewWithTag:(panel.tag + length)];
                 if ([self isEqualToColor:panel :view1] || [self isEqualToColor:panel :view2]) {
                     return;
                 }
-            } else if (panel.tag % 4 == 0) {
+            } else if (panel.tag % length == 0) {
                 UIView* view1 = [baseView viewWithTag:(panel.tag - 1)];
-                UIView* view2 = [baseView viewWithTag:(panel.tag + 4)];
+                UIView* view2 = [baseView viewWithTag:(panel.tag + length)];
                 if ([self isEqualToColor:panel :view1] || [self isEqualToColor:panel :view2]) {
                     return;
                 }
             } else {
                 UIView* view1 = [baseView viewWithTag:(panel.tag + 1)];
                 UIView* view2 = [baseView viewWithTag:(panel.tag - 1)];
-                UIView* view3 = [baseView viewWithTag:(panel.tag + 4)];
+                UIView* view3 = [baseView viewWithTag:(panel.tag + length)];
                 if ([self isEqualToColor:panel :view1] || [self isEqualToColor:panel :view2] || [self isEqualToColor:panel :view3]) {
                     return;
                 }
             }
-        } else if (panel.tag > 12) {
-            if (panel.tag % 4 == 1) {
+        } else if (panel.tag > totalPanel - length) {
+            if (panel.tag % length == 1) {
                 UIView* view1 = [baseView viewWithTag:(panel.tag + 1)];
-                UIView* view2 = [baseView viewWithTag:(panel.tag - 4)];
+                UIView* view2 = [baseView viewWithTag:(panel.tag - length)];
                 if ([self isEqualToColor:panel :view1] || [self isEqualToColor:panel :view2]) {
                     return;
                 }
-            } else if (panel.tag % 4 == 0) {
+            } else if (panel.tag % length == 0) {
                 UIView* view1 = [baseView viewWithTag:(panel.tag - 1)];
-                UIView* view2 = [baseView viewWithTag:(panel.tag - 4)];
+                UIView* view2 = [baseView viewWithTag:(panel.tag - length)];
                 if ([self isEqualToColor:panel :view1] || [self isEqualToColor:panel :view2]) {
                     return;
                 }
             } else {
                 UIView* view1 = [baseView viewWithTag:(panel.tag + 1)];
                 UIView* view2 = [baseView viewWithTag:(panel.tag - 1)];
-                UIView* view3 = [baseView viewWithTag:(panel.tag - 4)];
+                UIView* view3 = [baseView viewWithTag:(panel.tag - length)];
                 if ([self isEqualToColor:panel :view1] || [self isEqualToColor:panel :view2] || [self isEqualToColor:panel :view3]) {
                     return;
                 }
             }
         } else {
-            if (panel.tag % 4 == 1) {
+            if (panel.tag % length == 1) {
                 UIView* view1 = [baseView viewWithTag:(panel.tag + 1)];
-                UIView* view2 = [baseView viewWithTag:(panel.tag - 4)];
+                UIView* view2 = [baseView viewWithTag:(panel.tag - length)];
                 if ([self isEqualToColor:panel :view1] || [self isEqualToColor:panel :view2]) {
                     return;
                 }
-            } else if (panel.tag % 4 == 0) {
+            } else if (panel.tag % length == 0) {
                 UIView* view1 = [baseView viewWithTag:(panel.tag - 1)];
-                UIView* view2 = [baseView viewWithTag:(panel.tag - 4)];
+                UIView* view2 = [baseView viewWithTag:(panel.tag - length)];
                 if ([self isEqualToColor:panel :view1] || [self isEqualToColor:panel :view2]) {
                     return;
                 }
             } else {
                 UIView* view1 = [baseView viewWithTag:(panel.tag + 1)];
                 UIView* view2 = [baseView viewWithTag:(panel.tag - 1)];
-                UIView* view3 = [baseView viewWithTag:(panel.tag + 4)];
-                UIView* view4 = [baseView viewWithTag:(panel.tag - 4)];
+                UIView* view3 = [baseView viewWithTag:(panel.tag + length)];
+                UIView* view4 = [baseView viewWithTag:(panel.tag - length)];
                 if ([self isEqualToColor:panel :view1] || [self isEqualToColor:panel :view2] || [self isEqualToColor:panel :view3] || [self isEqualToColor:panel :view4]) {
                     return;
                 }

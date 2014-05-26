@@ -19,6 +19,8 @@
     float endX, endY;
     int startTag;
     int score;
+    int length;
+    int totalPanel;
 }
 
 - (IBAction)tappedRetryButton;
