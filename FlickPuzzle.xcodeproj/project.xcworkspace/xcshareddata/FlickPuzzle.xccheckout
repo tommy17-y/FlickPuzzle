@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>F4225A68-99B3-42D5-AFBD-4156AC02253C</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FlickPuzzle</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DC03294C-4809-4F33-904B-014F9BFC2E0D</key>
+		<string>https://github.com/y-tomiyoshi/FlickPuzzle.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>FlickPuzzle.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DC03294C-4809-4F33-904B-014F9BFC2E0D</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/y-tomiyoshi/FlickPuzzle.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DC03294C-4809-4F33-904B-014F9BFC2E0D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DC03294C-4809-4F33-904B-014F9BFC2E0D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FlickPuzzle</string>
+		</dict>
+	</array>
+</dict>
+</plist>
