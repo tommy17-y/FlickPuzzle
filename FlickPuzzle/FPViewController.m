@@ -26,8 +26,8 @@
     endY = 0;
     startTag = 0;
     score = 0;
-    length = 4;
     totalPanel = (int)[panels count];
+    length = sqrt(totalPanel);
     
     retryButton.hidden = YES;
     gameoverLabel.hidden = YES;
@@ -35,10 +35,10 @@
     baseView.layer.cornerRadius = 5;
     baseView.clipsToBounds = true;
     
-    [self initSetPanelColor];
+    [self initSetPanel];
 }
 
-- (void)initSetPanelColor {
+- (void)initSetPanel {
     
     for (UIView* panel in panels) {
         [self changeColor:panel];
@@ -63,7 +63,7 @@
         panel.backgroundColor = [UIColor orangeColor];
     }
     
-    [self checkGameOver];
+    [self check];
 }
 
 - (BOOL)isEqualToColor:(UIView*)v1:(UIView*)v2 {
@@ -90,7 +90,7 @@
         startX = location.x;
         startY = location.y;
     }
-
+    
 }
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -117,7 +117,7 @@
                             view2.center = point1;
                             
                         }completion:^(BOOL finished){
-                            scoreLabel.text = [NSString stringWithFormat:@"%d", score];
+                            scoreLabel.text = [NSString stringWithFormat:@"スコア：%d", score];
                             view2.tag++;
                             view1.tag--;
                             view1.center = point2;
@@ -141,7 +141,7 @@
                             view2.center = point1;
                             
                         }completion:^(BOOL finished){
-                            scoreLabel.text = [NSString stringWithFormat:@"%d", score];
+                            scoreLabel.text = [NSString stringWithFormat:@"スコア：%d", score];
                             view2.tag--;
                             view1.tag++;
                             view1.center = point2;
@@ -169,7 +169,7 @@
                             view2.center = point1;
                             
                         }completion:^(BOOL finished){
-                            scoreLabel.text = [NSString stringWithFormat:@"%d", score];
+                            scoreLabel.text = [NSString stringWithFormat:@"スコア：%d", score];
                             view2.tag -= length;
                             view1.tag += length;
                             view1.center = point2;
@@ -194,7 +194,7 @@
                             view2.center = point1;
                             
                         }completion:^(BOOL finished){
-                            scoreLabel.text = [NSString stringWithFormat:@"%d", score];
+                            scoreLabel.text = [NSString stringWithFormat:@"スコア：%d", score];
                             view2.tag += length;
                             view1.tag -= length;
                             view1.center = point2;
@@ -212,7 +212,11 @@
 }
 
 - (void)checkGameOver {
-    
+
+}
+
+- (void)check {
+
     for (UIView* panel in panels) {
         if (panel.tag <= length) {
             if (panel.tag % length == 1) {
@@ -260,13 +264,15 @@
             if (panel.tag % length == 1) {
                 UIView* view1 = [baseView viewWithTag:(panel.tag + 1)];
                 UIView* view2 = [baseView viewWithTag:(panel.tag - length)];
-                if ([self isEqualToColor:panel :view1] || [self isEqualToColor:panel :view2]) {
+                UIView* view3 = [baseView viewWithTag:(panel.tag + length)];
+                if ([self isEqualToColor:panel :view1] || [self isEqualToColor:panel :view2] || [self isEqualToColor:panel :view3]) {
                     return;
                 }
             } else if (panel.tag % length == 0) {
                 UIView* view1 = [baseView viewWithTag:(panel.tag - 1)];
                 UIView* view2 = [baseView viewWithTag:(panel.tag - length)];
-                if ([self isEqualToColor:panel :view1] || [self isEqualToColor:panel :view2]) {
+                UIView* view3 = [baseView viewWithTag:(panel.tag + length)];
+                if ([self isEqualToColor:panel :view1] || [self isEqualToColor:panel :view2] || [self isEqualToColor:panel :view3]) {
                     return;
                 }
             } else {
@@ -295,10 +301,10 @@
     retryButton.hidden = YES;
     gameoverLabel.hidden = YES;
     
-    [self initSetPanelColor];
+    [self initSetPanel];
     
     score = 0;
-    scoreLabel.text = [NSString stringWithFormat:@"%d", score];
+    scoreLabel.text = [NSString stringWithFormat:@"スコア：%d", score];
 }
 
 - (void)didReceiveMemoryWarning

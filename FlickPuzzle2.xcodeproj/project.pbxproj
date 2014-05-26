@@ -22,6 +22,8 @@
 		B632937C1933423700315238 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B632937A1933423700315238 /* InfoPlist.strings */; };
 		B632937E1933423700315238 /* FlickPuzzleTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B632937D1933423700315238 /* FlickPuzzleTests.m */; };
 		B63293881933557400315238 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63293871933557400315238 /* QuartzCore.framework */; };
+		B65E7F0C1933A0F800F436FF /* appIcon_small.png in Resources */ = {isa = PBXBuildFile; fileRef = B65E7F0A1933A0F800F436FF /* appIcon_small.png */; };
+		B65E7F0D1933A0F800F436FF /* appIcon.png in Resources */ = {isa = PBXBuildFile; fileRef = B65E7F0B1933A0F800F436FF /* appIcon.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,26 +37,28 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		B632934F1933423600315238 /* FlickPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		B632934F1933423600315238 /* FlickPuzzle2.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlickPuzzle2.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63293521933423600315238 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B63293541933423700315238 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		B63293561933423700315238 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		B632935A1933423700315238 /* FlickPuzzle-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlickPuzzle-Info.plist"; sourceTree = "<group>"; };
+		B632935A1933423700315238 /* FlickPuzzle2-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlickPuzzle2-Info.plist"; sourceTree = "<group>"; };
 		B632935C1933423700315238 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B632935E1933423700315238 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		B63293601933423700315238 /* FlickPuzzle-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlickPuzzle-Prefix.pch"; sourceTree = "<group>"; };
+		B63293601933423700315238 /* FlickPuzzle2-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "FlickPuzzle2-Prefix.pch"; sourceTree = "<group>"; };
 		B63293611933423700315238 /* FPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPAppDelegate.h; sourceTree = "<group>"; };
 		B63293621933423700315238 /* FPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPAppDelegate.m; sourceTree = "<group>"; };
 		B63293651933423700315238 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B63293671933423700315238 /* FPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FPViewController.h; sourceTree = "<group>"; };
 		B63293681933423700315238 /* FPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FPViewController.m; sourceTree = "<group>"; };
 		B632936A1933423700315238 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		B63293701933423700315238 /* FlickPuzzleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickPuzzleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B63293701933423700315238 /* FlickPuzzle2Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FlickPuzzle2Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B63293711933423700315238 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		B63293791933423700315238 /* FlickPuzzleTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlickPuzzleTests-Info.plist"; sourceTree = "<group>"; };
+		B63293791933423700315238 /* FlickPuzzle2Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "FlickPuzzle2Tests-Info.plist"; sourceTree = "<group>"; };
 		B632937B1933423700315238 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B632937D1933423700315238 /* FlickPuzzleTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FlickPuzzleTests.m; sourceTree = "<group>"; };
 		B63293871933557400315238 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		B65E7F0A1933A0F800F436FF /* appIcon_small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon_small.png; sourceTree = "<group>"; };
+		B65E7F0B1933A0F800F436FF /* appIcon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = appIcon.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,8 +99,8 @@
 		B63293501933423600315238 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				B632934F1933423600315238 /* FlickPuzzle.app */,
-				B63293701933423700315238 /* FlickPuzzleTests.xctest */,
+				B632934F1933423600315238 /* FlickPuzzle2.app */,
+				B63293701933423700315238 /* FlickPuzzle2Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -116,6 +120,8 @@
 		B63293581933423700315238 /* FlickPuzzle */ = {
 			isa = PBXGroup;
 			children = (
+				B65E7F0A1933A0F800F436FF /* appIcon_small.png */,
+				B65E7F0B1933A0F800F436FF /* appIcon.png */,
 				B63293611933423700315238 /* FPAppDelegate.h */,
 				B63293621933423700315238 /* FPAppDelegate.m */,
 				B63293641933423700315238 /* Main.storyboard */,
@@ -130,10 +136,10 @@
 		B63293591933423700315238 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B632935A1933423700315238 /* FlickPuzzle-Info.plist */,
+				B632935A1933423700315238 /* FlickPuzzle2-Info.plist */,
 				B632935B1933423700315238 /* InfoPlist.strings */,
 				B632935E1933423700315238 /* main.m */,
-				B63293601933423700315238 /* FlickPuzzle-Prefix.pch */,
+				B63293601933423700315238 /* FlickPuzzle2-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -150,7 +156,7 @@
 		B63293781933423700315238 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				B63293791933423700315238 /* FlickPuzzleTests-Info.plist */,
+				B63293791933423700315238 /* FlickPuzzle2Tests-Info.plist */,
 				B632937A1933423700315238 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -159,9 +165,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		B632934E1933423600315238 /* FlickPuzzle */ = {
+		B632934E1933423600315238 /* FlickPuzzle2 */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B63293811933423700315238 /* Build configuration list for PBXNativeTarget "FlickPuzzle" */;
+			buildConfigurationList = B63293811933423700315238 /* Build configuration list for PBXNativeTarget "FlickPuzzle2" */;
 			buildPhases = (
 				B632934B1933423600315238 /* Sources */,
 				B632934C1933423600315238 /* Frameworks */,
@@ -171,14 +177,14 @@
 			);
 			dependencies = (
 			);
-			name = FlickPuzzle;
+			name = FlickPuzzle2;
 			productName = FlickPuzzle;
-			productReference = B632934F1933423600315238 /* FlickPuzzle.app */;
+			productReference = B632934F1933423600315238 /* FlickPuzzle2.app */;
 			productType = "com.apple.product-type.application";
 		};
-		B632936F1933423700315238 /* FlickPuzzleTests */ = {
+		B632936F1933423700315238 /* FlickPuzzle2Tests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = B63293841933423700315238 /* Build configuration list for PBXNativeTarget "FlickPuzzleTests" */;
+			buildConfigurationList = B63293841933423700315238 /* Build configuration list for PBXNativeTarget "FlickPuzzle2Tests" */;
 			buildPhases = (
 				B632936C1933423700315238 /* Sources */,
 				B632936D1933423700315238 /* Frameworks */,
@@ -189,9 +195,9 @@
 			dependencies = (
 				B63293761933423700315238 /* PBXTargetDependency */,
 			);
-			name = FlickPuzzleTests;
+			name = FlickPuzzle2Tests;
 			productName = FlickPuzzleTests;
-			productReference = B63293701933423700315238 /* FlickPuzzleTests.xctest */;
+			productReference = B63293701933423700315238 /* FlickPuzzle2Tests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -209,7 +215,7 @@
 					};
 				};
 			};
-			buildConfigurationList = B632934A1933423600315238 /* Build configuration list for PBXProject "FlickPuzzle" */;
+			buildConfigurationList = B632934A1933423600315238 /* Build configuration list for PBXProject "FlickPuzzle2" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -222,8 +228,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				B632934E1933423600315238 /* FlickPuzzle */,
-				B632936F1933423700315238 /* FlickPuzzleTests */,
+				B632934E1933423600315238 /* FlickPuzzle2 */,
+				B632936F1933423700315238 /* FlickPuzzle2Tests */,
 			);
 		};
 /* End PBXProject section */
@@ -235,6 +241,8 @@
 			files = (
 				B632936B1933423700315238 /* Images.xcassets in Resources */,
 				B632935D1933423700315238 /* InfoPlist.strings in Resources */,
+				B65E7F0D1933A0F800F436FF /* appIcon.png in Resources */,
+				B65E7F0C1933A0F800F436FF /* appIcon_small.png in Resources */,
 				B63293661933423700315238 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -273,7 +281,7 @@
 /* Begin PBXTargetDependency section */
 		B63293761933423700315238 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = B632934E1933423600315238 /* FlickPuzzle */;
+			target = B632934E1933423600315238 /* FlickPuzzle2 */;
 			targetProxy = B63293751933423700315238 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -382,9 +390,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FlickPuzzle/FlickPuzzle-Prefix.pch";
-				INFOPLIST_FILE = "FlickPuzzle/FlickPuzzle-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "FlickPuzzle/FlickPuzzle2-Prefix.pch";
+				INFOPLIST_FILE = "FlickPuzzle/FlickPuzzle2-Info.plist";
+				PRODUCT_NAME = FlickPuzzle2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -395,9 +403,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "FlickPuzzle/FlickPuzzle-Prefix.pch";
-				INFOPLIST_FILE = "FlickPuzzle/FlickPuzzle-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "FlickPuzzle/FlickPuzzle2-Prefix.pch";
+				INFOPLIST_FILE = "FlickPuzzle/FlickPuzzle2-Info.plist";
+				PRODUCT_NAME = FlickPuzzle2;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -417,8 +425,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "FlickPuzzleTests/FlickPuzzleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "FlickPuzzleTests/FlickPuzzle2Tests-Info.plist";
+				PRODUCT_NAME = FlickPuzzle2Tests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -435,8 +443,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "FlickPuzzle/FlickPuzzle-Prefix.pch";
-				INFOPLIST_FILE = "FlickPuzzleTests/FlickPuzzleTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "FlickPuzzleTests/FlickPuzzle2Tests-Info.plist";
+				PRODUCT_NAME = FlickPuzzle2Tests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -445,7 +453,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		B632934A1933423600315238 /* Build configuration list for PBXProject "FlickPuzzle" */ = {
+		B632934A1933423600315238 /* Build configuration list for PBXProject "FlickPuzzle2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B632937F1933423700315238 /* Debug */,
@@ -454,21 +462,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		B63293811933423700315238 /* Build configuration list for PBXNativeTarget "FlickPuzzle" */ = {
+		B63293811933423700315238 /* Build configuration list for PBXNativeTarget "FlickPuzzle2" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B63293821933423700315238 /* Debug */,
 				B63293831933423700315238 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
-		B63293841933423700315238 /* Build configuration list for PBXNativeTarget "FlickPuzzleTests" */ = {
+		B63293841933423700315238 /* Build configuration list for PBXNativeTarget "FlickPuzzle2Tests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				B63293851933423700315238 /* Debug */,
 				B63293861933423700315238 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

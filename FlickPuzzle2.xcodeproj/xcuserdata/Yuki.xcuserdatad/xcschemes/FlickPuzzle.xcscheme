@@ -16,8 +16,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B632934E1933423600315238"
                BuildableName = "FlickPuzzle.app"
-               BlueprintName = "FlickPuzzle"
-               ReferencedContainer = "container:FlickPuzzle.xcodeproj">
+               BlueprintName = "FlickPuzzle2"
+               ReferencedContainer = "container:FlickPuzzle2.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -34,8 +34,8 @@
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "B632936F1933423700315238"
                BuildableName = "FlickPuzzleTests.xctest"
-               BlueprintName = "FlickPuzzleTests"
-               ReferencedContainer = "container:FlickPuzzle.xcodeproj">
+               BlueprintName = "FlickPuzzle2Tests"
+               ReferencedContainer = "container:FlickPuzzle2.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -44,8 +44,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B632934E1933423600315238"
             BuildableName = "FlickPuzzle.app"
-            BlueprintName = "FlickPuzzle"
-            ReferencedContainer = "container:FlickPuzzle.xcodeproj">
+            BlueprintName = "FlickPuzzle2"
+            ReferencedContainer = "container:FlickPuzzle2.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
    </TestAction>
@@ -63,8 +63,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B632934E1933423600315238"
             BuildableName = "FlickPuzzle.app"
-            BlueprintName = "FlickPuzzle"
-            ReferencedContainer = "container:FlickPuzzle.xcodeproj">
+            BlueprintName = "FlickPuzzle2"
+            ReferencedContainer = "container:FlickPuzzle2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -81,8 +81,8 @@
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "B632934E1933423600315238"
             BuildableName = "FlickPuzzle.app"
-            BlueprintName = "FlickPuzzle"
-            ReferencedContainer = "container:FlickPuzzle.xcodeproj">
+            BlueprintName = "FlickPuzzle2"
+            ReferencedContainer = "container:FlickPuzzle2.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
